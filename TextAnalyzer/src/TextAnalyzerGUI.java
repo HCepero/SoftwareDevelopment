@@ -36,7 +36,7 @@ public class TextAnalyzerGUI extends Application {
 
         // Text area to display results
         resultArea.setEditable(false);
-        resultArea.setPrefSize(400, 300); // double the size of text area
+        resultArea.setPrefSize(400, 300); // set the size of text area
 
         // Scene
         VBox vbox = new VBox(openButton, resultArea);

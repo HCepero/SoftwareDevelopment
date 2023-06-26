@@ -8,8 +8,8 @@ import java.nio.file.*;
  * TextAnalyzer is a utility class for processing a text file. It can remove HTML tags, count word occurrences, 
  * and print or retrieve most frequently occurring words.
  *
- * @version 1.1
- */
+ * @version 1.2
+ */ 
 public class TextAnalyzer {
     private final Map<String, Integer> wordCount = new HashMap<>();
     private static final Pattern HTML_TAG = Pattern.compile("<[^>]+>");
@@ -37,7 +37,7 @@ public class TextAnalyzer {
      *
      * @param line A line of text to be analyzed for word occurrences.
      */
-    private void countWords(String line) {
+    public void countWords(String line) {
         String[] words = line.toLowerCase().split("\\W+");
         for (String word : words) {
             if (!word.trim().isEmpty()) {
@@ -55,7 +55,7 @@ public class TextAnalyzer {
      * @param input A line of text possibly containing HTML tags.
      * @return The input string with all HTML tags removed.
      */
-    private String removeHtmlTags(String input) {
+    public String removeHtmlTags(String input) {
         Matcher matcher = HTML_TAG.matcher(input);
         return matcher.replaceAll("");
     }
