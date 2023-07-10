@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 
  * @version 1.0
  */
-class ArraySum extends RecursiveTask<Long> {
+public class ArraySum extends RecursiveTask<Long> {
     // Threshold of array size above which task will be split into smaller tasks
     static final int THRESHOLD = 5000000;
     final long[] array;
